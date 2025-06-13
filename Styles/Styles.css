@@ -11,7 +11,12 @@
   transform: rotateX(10deg) translateZ(5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
+/* Hero image styling */
+#accueil img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
 /* Cartes projets 3D au hover */
 .hover-3d { transition: transform 0.4s; transform-style: preserve-3d; }
 .hover-3d:hover { transform: rotateY(15deg) translateZ(20px); }
@@ -90,4 +95,34 @@ section { min-height: 60vh; padding-bottom: 60px; }
 }
 .timeline-content span {
   font-size: 0.9rem;
+}
+
+/* Décalage de l'image vers la droite sur grand écran */
+@media (min-width: 992px) {
+  #accueil .hero-image {
+    margin-left: auto;
+  }
+}
+html {
+  background: linear-gradient(135deg, #e9f2ff, #f7fbff);
+}
+body {
+  background: transparent;
+}
+.framed-section {
+  position: relative;
+  padding: 3rem 1rem !important; /* ajoute de la marge intérieure */
+  margin: 2rem 1rem;              /* espace entre sections */
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cadre animé au survol */
+.framed-section:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
