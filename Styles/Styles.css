@@ -1,0 +1,93 @@
+/* Navbar en 3D */
+.nav-3d { perspective: 1000px; padding-top: 1rem; }
+.nav-3d-item { transition: transform 0.3s, color 0.3s; }
+.nav-3d-item:hover { transform: rotateX(15deg) translateZ(10px); color: #0d6efd; }
+/* Effet 3D pour les boutons */
+.btn-3d {
+  perspective: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-3d:hover {
+  transform: rotateX(10deg) translateZ(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Cartes projets 3D au hover */
+.hover-3d { transition: transform 0.4s; transform-style: preserve-3d; }
+.hover-3d:hover { transform: rotateY(15deg) translateZ(20px); }
+
+/* Icônes sociales */
+.social a { margin: 0 10px; color: #333; transition: color 0.3s, transform 0.3s; }
+.social a:hover { color: #0d6efd; transform: scale(1.2); }
+
+/* Style global */
+body { font-family: "Segoe UI", sans-serif; padding-top: 80px; }
+section { min-height: 60vh; padding-bottom: 60px; }
+#contactForm .form-control:focus { box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25); }
+/* Styles généraux des cartes (comme projets) */
+.hover-3d {
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.hover-3d:hover {
+  transform: rotateY(15deg) translateZ(20px);
+}
+/* --- Styles pour section Compétences --- */
+#competences i {
+  color: #0d6efd;
+  transition: transform 0.3s, color 0.3s;
+}
+#competences i:hover {
+  transform: translateY(-10px) scale(1.1);
+  color: #0056b3;
+}
+#competences p {
+  margin-top: 8px;
+  font-weight: 500;
+}
+#competences h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.progress {
+  height: 1.5rem;
+}
+
+.progress-bar {
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+/* Timeline parcours professionnel */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #dee2e6;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+.timeline-icon {
+  position: absolute;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.timeline-content h5 {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.timeline-content span {
+  font-size: 0.9rem;
+}
